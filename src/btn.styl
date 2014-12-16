@@ -1,0 +1,214 @@
+@import 'nib'
+
+// 按钮文本颜色
+$color = #444
+// 按钮文本宽度
+$weight = bold
+// 按钮文本大小
+$size = 1em
+// 按钮文本字体
+$family = Arial, Helvetica
+// 按钮边框宽度
+$bWidth = 1px
+// 按钮边框形式
+$bStyle = solid
+// 按钮边框颜色
+$bColor = rgba(0, 0, 0, 0.3)
+// 按钮边框圆角
+$radius = 5px
+// 按钮高度
+$height = 27px
+// 按钮上下外边距
+$mTop = 4px
+// 按钮左右外边距
+$mLeft = 6px
+// 按钮上下内边距
+$pTop = 0
+// 按钮左右内边距
+$pLeft = 16px
+// 按钮背景色
+$bgColor = #e0e0e0
+// 按钮背景裁剪
+$bgClip = padding-box
+// 激活按钮文本颜色
+$actColor = #fff
+// 激活按钮背景色
+$actBgColor = #f5f5ff
+// icon部分背景色
+$iconBgColor = #ccc
+// icon部分宽度
+$iconWidth = 1em
+// icon部分文字大小
+$iconSize = 1.5em
+// icon部分圆角
+$iconRadius = 0.15em
+
+.btn
+  border $bWidth $bStyle $bColor
+  cursor pointer
+  display inline-block
+  color $color
+  text-decoration none
+  *display inline
+  *zoom 1
+  height $height
+  line-height $height
+  font-size $size
+  font-weight $weight
+  font-family $family
+  margin $mTop $mLeft
+  padding $pTop $pLeft
+  // （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用
+  outline 0
+  text-shadow 1px 1px 1px #fff
+  text-align center
+  border-radius $radius
+  box-shadow inset 1px 1px 5px rgba(255,255,255,0.2), 0 0 4px rgba(255,255,255,0.5)
+  transition all 0.3s ease-in-out
+  background-color $bgColor
+  background-image linear-gradient(top, #f7edff, #b1b1b1)
+  // filter progid:DXImageTransform.Microsoft.gradient(startColorStr='#f7edff', EndColorStr='#b1b1b1')
+  background-clip $bgClip
+  &:link,&:visited,&:hover
+    color $color
+    text-decoration none
+  &:hover,&:focus
+    background-color $actBgColor
+    background-image linear-gradient(top, #f5f5ff, #999)
+    // filter progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5ff', EndColorStr='#999999')
+  &:active
+    position relative
+    top 1px
+    box-shadow inset 0 0 8px rgba(80,80,80,0.5)
+  &:before
+    background $iconBgColor
+    background rgba(0,0,0,.1)
+    float left
+    width $iconWidth
+    text-align center
+    font-size $iconSize
+    margin 0 1em 0 -0.85em
+    padding 0 0.2em
+    box-shadow 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5)
+    border-radius $iconRadius
+
+.btn3D
+  box-shadow inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */ rgba(0,0,0,0.2) 0 .5em 5px
+  color #fff
+  background-color hsl(0, 0%, 75%)
+  border-left none
+  border-right none
+  position relative
+  &:active
+    box-shadow inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ rgba(0,0,0,0.4) 0 .1em 1px, /* border */ rgba(0,0,0,0.2) 0 .2em 6px
+  transform translateY(.2em)
+
+// 尺寸
+.big
+  $size = 17px
+  $height = 38px
+  $pLeft = 23px
+  $radius = 8px
+  
+  font-size $size
+  height $height
+  line-height $height
+  padding $pTop $pLeft
+  border-radius $radius
+.small
+  $size = 11px
+  $height = 20px
+  $pLeft = 8px
+  $radius = 4px
+  $bColor = #333
+  
+  border 1px solid $bColor
+  font-size $size
+  height $height
+  line-height $height
+  padding $pTop $pLeft
+  border-radius $radius
+  
+// 位置
+.left,.middle
+  border-right-width 0
+.left,.middle,.right
+  margin 0
+.left:active,.middle:active,.right:active
+  top 0
+.left
+  border-top-right-radius 0
+  border-bottom-right-radius 0
+.right
+  border-top-left-radius 0
+  border-bottom-left-radius 0
+.middle,.square
+  border-radius 0
+  
+// icon
+.add:before
+  content "\271A"
+.edit:before
+  content "\270E"
+.delete:before
+  content "\2718"
+.save:before
+  content "\2714"
+.email:before
+  content "\2709"
+.like:before
+  content "\2764"
+.next:before
+  content "\279C"
+.star:before
+  content "\2605"
+.spark:before
+  content "\2737"
+.play:before
+  content "\25B6"
+.go:before
+  content "\00BB"
+.king:before
+  content attr(data-icon)
+.cart:before
+  content url("./cart.png")
+  
+.stripe
+  &:hover,&:focus
+    background-image url(./cart.png), linear-gradient(top, #f5f5ff, #999999)
+  &:active
+    box-shadow inset 0 0 8px rgba(80,80,80,0.5)
+
+.disabled
+  $bColor = #ccc
+  $bgColor = #e0e0e0
+  $color = #ccc
+  
+  border-color $bColor
+  background $bgColor
+  color $color
+  cursor default
+  box-shadow none
+  opacity 0.7
+  // -ms-filter "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"
+  // filter alpha(opacity=70)
+  &:hover,&:active,&:focus
+    top 0
+    background $bgColor
+    box-shadow none
+    
+.colours
+  &:link,&:visited
+    color #fff
+    font-weight bold
+    text-shadow 0 1px 1px rgba(0, 0, 0, 0.6)
+
+.blue
+  border-color #003b80
+  background-color #004ca3
+  background-image linear-gradient(top, #006CE8, #004CA3)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#006CE8', EndColorStr='#004CA3')
+  &:hover,&:focus
+    background-color #003b80
+    background-image linear-gradient(top, #006CE8, #003B80)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#006CE8', EndColorStr='#003B80')
