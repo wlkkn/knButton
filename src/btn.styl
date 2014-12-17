@@ -3,7 +3,7 @@
 // 按钮文本颜色
 $color = #444
 // 按钮文本宽度
-$weight = bold
+$weight = normal
 // 按钮文本大小
 $size = 1em
 // 按钮文本字体
@@ -145,6 +145,13 @@ $iconRadius = 0.15em
 .middle,.square
   border-radius 0
   
+.bold
+  font-weight bold !important
+.underline
+  text-decoration underline !important
+.italic
+  font-style italic !important
+  
 // icon
 .add:before
   content "\271A"
@@ -197,6 +204,12 @@ $iconRadius = 0.15em
     background $bgColor
     box-shadow none
     
+.highlight
+  &:link,&:visited,&:hover,&:focus
+    box-shadow 0 0 20px #FFF
+  &:active
+    box-shadow 0 0 28px #FFF
+    
 .colours
   &:link,&:visited
     color #fff
@@ -212,3 +225,180 @@ $iconRadius = 0.15em
     background-color #003b80
     background-image linear-gradient(top, #006CE8, #003B80)
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#006CE8', EndColorStr='#003B80')
+
+.red
+  border-color #b50000
+  background-color #d00000
+  background-image linear-gradient(top, #F33, #D00000)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF3333', EndColorStr='#D00000')
+  &:hover,&:focus
+    background-color #b50000
+    background-image linear-gradient(top, #F33, #B50000)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF3333', EndColorStr='#B50000')
+
+.green
+  border-color #279100
+  background-color #2EAD00
+  background-image linear-gradient(top, #3FED00, #2EAD00)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3FED00', EndColorStr='#2EAD00')
+  &:hover,&:focus
+    background-color #279100
+    background-image linear-gradient(top, #3FED00, #279100)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3FED00', EndColorStr='#279100')
+
+.orange
+  border-color #da7c0c
+  background-color #faa51a
+  background-image linear-gradient(top, #faa51a, #f47a20)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#f47a20')
+  &:hover,&:focus
+    background-color #da7c0c
+    background-image linear-gradient(top, #faa51a, #da7c0c)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#da7c0c');
+      
+.purple
+  border-color #660099
+  background-color #CA00D1
+  background-image linear-gradient(top, #CA00D1, #AA00B0)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#CA00D1', EndColorStr='#AA00B0');
+  &:hover,&:focus
+    background-color #609
+    background-image linear-gradient(top, #CA00D1, #609)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#CA00D1', EndColorStr='#660099');
+      
+.black
+  border-color #000
+  background-color #333
+  background-image linear-gradient(top, #666, #333)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#333333');
+  &:hover,&:focus
+    background-color #000
+    background-image linear-gradient(top, #666, #000)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#000000');
+
+.color1
+  border-color #5d81ab
+  background-color #80a9da
+  background-image linear-gradient(top, #80a9da, #6f97c5)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#80a9da', EndColorStr='#6f97c5');
+  &:hover,&:focus
+    background-color #6f97c5
+    background-image linear-gradient(top, #6f97c5, #80a9da)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f97c5', EndColorStr='#80a9da')
+
+.push
+  border-color #911208
+  background-color #ff5934
+  background-image linear-gradient(top, #ff5934 0%,#dc4116 50%,#d02e17 51%,#b21109 100%)
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff5934', EndColorStr='#dc4116');
+  &:hover,&:focus
+    background-color #a50402
+    background-image linear-gradient(top, #a50402, #e54321)
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#a50402', EndColorStr='#e54321');
+      
+.clean-gray
+  background-color #eee
+  background-image linear-gradient(top, #eeeeee, #cccccc)
+  border-color #ccc #ccc #bbb
+  &:hover,&:focus
+    background-color #ddd
+    border-color #bbb #bbb #999
+    background-image linear-gradient(top, #dddddd, #bbbbbb)
+
+.cupid-green
+  background-color #7fbf4d
+  background-image linear-gradient(top, #7fbf4d, #63a62f)
+  border-color #63a62f #63a62f #5b992b
+  &:hover,&:focus
+    background-color #76b347
+    background-image linear-gradient(top, #76b347, #5e9e2e)
+    
+.cupid-blue
+  background-color #d7e5f5
+  background-image linear-gradient(top, #d7e5f5, #cbe0f5)
+  border-color #cbe0f5
+  &:hover,&:focus
+    background-color #ccd9e8
+    background-image linear-gradient(top, #ccd9e8, #c1d4e8)
+    
+.blue-pill
+  background-color #a5b8da
+  background-image linear-gradient(top, #a5b8da, #7089b3)
+  border-color #7089b3
+  &:hover,&:focus
+    background-color #9badcc
+    background-image linear-gradient(top, #9badcc, #687fa6)
+
+.dribbble
+  background-color #f26895
+  background-image linear-gradient(top, #f26895 0, #f26895 50%, #f15587 50%, #f15587 100%)
+  border-color #f26895
+  &:hover,&:focus
+    background-color #e2558b
+    background-image linear-gradient(top, #e2558b 0, #e2558b 50%, #df3e7b 50%, #df3e7b 100%)
+
+.slick-black
+  background-color rgba(50, 50, 50, 0.9)
+  background-image linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%)
+  &:hover,&:focus
+    background-color rgba(70, 70, 70, 0.9)
+    background-image linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%)
+    
+.thoughtbot
+  background-color #ee432e
+  background-image linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%)
+  border-color #951100
+  &:hover,&:focus
+    background-color #f37873
+    background-image linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%)
+
+.blue-candy
+  background-color #779be9
+  background-image linear-gradient(top, #779be9 0%, #376fe0 50%, #2260dd 50%, #2463de 100%)
+  border-color #376fe0
+  &:hover,&:focus
+    background-color #6989cf
+    background-image linear-gradient(top, #6989cf 0%, #3263c7 50%, #1d55c4 50%, #1d55c4 100%)
+
+.purple-candy
+  background-color #9e76e8
+  background-image linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%)
+  &:hover,&:focus
+    background-color #8d69cf
+    background-image linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%)
+    
+.shiny-blue
+  background-color #759ae9
+  background-image linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%)
+  border-color #1f58cc #1b4db3 #174299 #1b4db3
+  &:hover,&:focus
+    background-color #5d89e8
+    background-image linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%)
+    
+.download-itunes
+  background-color #52a8e8
+  background-image linear-gradient(top, #52a8e8, #377ad0)
+  border-color #4081af #2e69a3 #20559a #2e69a3
+  &:hover,&:focus
+    background-color #3e9ee5
+    background-image linear-gradient(top, #3e9ee5 0%, #206bcb 100%)
+    border-top 1px solid #2a73a6
+    border-right 1px solid #165899
+    border-bottom 1px solid #07428f
+    border-left 1px solid #165899
+    
+.skip
+  background-color #8c9cbf
+  background-image linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%)
+  border-color #172d6e
+  &:hover,&:focus
+    background-color #7f8dad
+    background-image linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%)
+    
+.minimal-indent
+  background-color #f3f3f3
+  background-image linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%)
+  border-color #dfdfdf
+  &:hover,&:focus
+    background-color #e5e5e5
+    background-image linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%)
